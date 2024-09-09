@@ -1,0 +1,29 @@
+.postDitails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  color: #ffffff;
+  min-height: calc(100dvh - 73px);
+}
+
+.postDitails__wrapp {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.postDitails__title {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 15px;
+}
+
+.postDitails__body {
+  font-size: 30px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
