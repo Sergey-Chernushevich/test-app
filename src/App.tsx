@@ -15,15 +15,13 @@ function App() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    console.log('fetch');
-    
     dispatch(fetchPosts());
   }, [dispatch]);
 
   return (
     <div className="App">
     <Header/>
-    <Routes>
+    <Routes >
         <Route path="/new-post" element={<NewPostPage/>} />
         <Route path="/" element={<PostPage/>} />
         <Route path="/favorite" element={<FavoritePage/>} />
