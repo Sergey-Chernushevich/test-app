@@ -18,13 +18,13 @@ export const postsSlice = createSlice({
   name:'posts',
   initialState,
   reducers:{
-    addPost(state, action) {
+    addPost(state, action:PayloadAction<IPost>) {
       state.posts.unshift(action.payload);
     },
-    removePost(state, action) {
+    removePost(state, action:PayloadAction<number>) {
       state.posts = state.posts.filter((post) => post.id !== action.payload);
     },
-    toggleLike(state, action) {
+    toggleLike(state, action:PayloadAction<number>) {
       const toggledPost = state.posts.find(
         (post) => post.id === action.payload
       );

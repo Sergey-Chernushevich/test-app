@@ -11,7 +11,7 @@ function Form() {
   const [id,setId]=useState(+Date.now())
   const [title,setTitle]=useState('')
   const [body,setBody]=useState('')
-  const [yourId]=useState(123)
+  const [userId]=useState(123)
 
   const dispatch = useAppDispatch();
 
@@ -20,7 +20,7 @@ function Form() {
       alert('Fields must be filled');
     }
     else{
-      dispatch(addPost({id,title,body,yourId}));
+      dispatch(addPost({id,title,body,userId}));
       setTitle("");
       setBody("");
       setId(+Date.now())
@@ -57,7 +57,7 @@ const handleSubmit = (e: React.FormEvent) => {
         <label htmlFor="body">Your Id</label>
         <input id='body' className={classes.form__input} 
         type="text" 
-        value={yourId} 
+        value={userId} 
         disabled/>
 
       <Button title="Add post" onClick={addTask} />
